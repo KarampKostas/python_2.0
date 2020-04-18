@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    
+        <p> {{ object.id }} - {{ object.school }}  </p>
+
+
+    <form action="add" method="POST">
+
+        {% csrf_token %}
+        Enter first grade: <input type="text" name="num1"><br>
+        Enter second grade : <input type="text" name="num2"><br>
+        <input type="submit"><br>
+        
+        Grade average : {{res}}
+    </form>   
+
+{% endblock %}

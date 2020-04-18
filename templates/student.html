@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    
+<h1>Hello student</h1>
+
+<p>
+{{ name|capfirst }}
+</p>
+
+{% for instance in object_list %}
+    <p> {{ instance.id }} - <a href='/vathmologia/{{ instance.id }}/'>{{ instance.first_name}}</a> </p>
+{% endfor %}
+
+
+<ul> 
+    {% for my_sub_item in my_list %}
+<li>
+   {{forloop.counter}}-{{my_sub_item}}
+</li>
+    {% endfor %}
+
+</ul>
+
+{% endblock %}
